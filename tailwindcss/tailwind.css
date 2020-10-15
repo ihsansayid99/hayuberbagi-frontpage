@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Header */
+.header{
+    @apply .relative;
+    height: 560px;
+}
+.shadow-class{
+    z-index: -1;
+}
+
+.herotext p{
+    max-width: 540px;
+}
+
+/* Program */
+.centered{
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.program-item a{
+    @apply .invisible 
+}
+
+.program:hover .program-item  a{
+    @apply .visible .transition-all .duration-200;
+    
+}
+
+.program:hover a:hover{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(232,232,232,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(232,232,232,1);
+    box-shadow: 2px 2px 5px 0px rgba(232,232,232,1);
+}
+
+.program:hover .bg-overflow{
+    @apply .opacity-25 .transition-all .duration-200;
+}
+
+/* Kamar Inspirasi */
+.kamar-inspirasi{
+    height: 550px;
+}
+.item-ki hr,  .item-ki p {
+    width: 450px;
+}
+
+/* Informasi */
+
+.informasi{
+    border-radius: 0 0 30px 30px;
+}
+.info-item{
+    border-radius: 20px 0 20px 20px;
+}
+
+/* sidebar */
+/* #mySidebar{
+    display: none;
+    height: 0;
+}
+
+#mySidebar.active{
+    height: 100%;
+} */
+
+.fadeable {
+    @apply .w-full .fixed .z-30 .inset-0;
+    height: 0;
+    overflow: hidden;
+}
+
+.fade-in {
+    height: 100%;
+    transition:             height 1s;
+        -moz-transition:    height 1s;
+        -ms-transition:     height 1s;
+        -o-transition:      height 1s;
+        -webkit-transition: height 1s;
+}
+.fade-out {
+    height: 0;
+    transition:             height 1s;
+        -moz-transition:    height 1s;
+        -ms-transition:     height 1s;
+        -o-transition:      height 1s;
+        -webkit-transition: height 1s;
+}
+
+.bg-overlay{
+    z-index: -1;
+}
